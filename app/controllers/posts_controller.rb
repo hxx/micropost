@@ -14,13 +14,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @micropost.destroy
+    @post.destroy
     redirect_to root_url
   end
 
   private
 
-    def micropost_params
-      params.require(:micropost).permit(:content)
+    def post_params
+      params.require(:post).permit(:content)
     end
 end
